@@ -1,0 +1,27 @@
+name: Build library jar
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install zip, unzip
+      run: sudo apt update && sudo apt install zip unzip
+    
+    - name: Build
+      run: ./build.sh
+      
+    - name: Upload built jar
+      uses: actions/upload-artifact@v4
+      with:
+        name: libs
+        path: ./vkmod_an_libs.jar
