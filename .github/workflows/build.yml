@@ -18,10 +18,13 @@ jobs:
       run: sudo apt update && sudo apt install zip unzip
     
     - name: Build
-      run: ./build.sh
+      run:  |
+         ./build.sh
+         mkdir -p /tmp/result_jar
+         mv vkmod-an-libs.jar /tmp/result_jar/
       
     - name: Upload built jar
       uses: actions/upload-artifact@v4
       with:
         name: libs
-        path: vkmod_lib_builder/vkmod_an_libs.jar
+        path: /tmp/result_jar/
