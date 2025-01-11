@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "vulkanmod-an-libs",
+  "version": "0.1.1",
+  "name": "VulkanMod-Android-libs",
+  "description": "Vulkan libs for Android",
+  "authors": [
+    "artDev",
+    "Collateral"
+  ],
+  "environment": "*",
+  "entrypoints": {
+  }
+}
