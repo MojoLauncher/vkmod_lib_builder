@@ -11,7 +11,7 @@ mkpushd() {
 }
 
 getnatives() {
-   wget https://nightly.link/PojavLauncherTeam/lwjgl3/actions/runs/12714049494/lwjgl3-android-natives-$1.zip
+   wget https://nightly.link/MojoLauncher/lwjgl3/workflows/build-android/wip%2Frebase_3.3.3/lwjgl3-android-natives-$1.zip
    mkpushd ./libs_$1
       unzip ../lwjgl3-android-natives-$1.zip
    popd
